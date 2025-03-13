@@ -4,19 +4,16 @@ RUN apt update; apt install -y gnupg2
 RUN apt install python3-pip
 
 # Use an official Python runtime as the base image
-FROM python:3.9-slim
+FROM python:3.8
 
 # Set the working directory in the container
 WORKDIR /flask_application
 
 # Copy the requirements file into the container
-COPY requirements.txt .
+COPY . /flask_application
 
 # Install the dependencies
 RUN pip install --no-cache-dir -r requirements.txt
-
-# Copy the rest of the application code
-COPY . .
 
 # Expose the port the app runs on
 EXPOSE 8080
