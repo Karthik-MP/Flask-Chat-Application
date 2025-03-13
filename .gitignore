@@ -1,0 +1,8 @@
+
+app/*
+requirements.txt
+README.md
+run.py
+
+webserver-docker/app/main/__pycache__/*
+webserver-docker/app/__pycache__/*
