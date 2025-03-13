@@ -1,5 +1,7 @@
 FROM ubuntu:18.04
-RUN apt update; apt install -y gnupg2 
+RUN apt update; apt install -y gnupg2
+
+RUN apt install python3-pip
 
 # Use an official Python runtime as the base image
 FROM python:3.9-slim
