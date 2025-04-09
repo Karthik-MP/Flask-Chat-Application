@@ -24,7 +24,7 @@ spec:
                   
       containers:
         - name: mongodb
-          image: karthikmp15/mongodb 
+          image: karthikmp15/mongodb:1.0.0
           ports:
             - containerPort: 27017
           volumeMounts: 
