@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: flask-web-server-deployment
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: flask-web-server
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: flask-web-server
-          image: <your-flask-image>
+          image: karthikmp15/flask-chat-application:1.0.0
           ports:
-            - containerPort: 5000  # Flask default port
+            - containerPort: 8080  # Flask default port
