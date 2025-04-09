@@ -23,4 +23,4 @@ spec:
       volumes:
         - name: mongodb-data
           persistentVolumeClaim:
-            claimName: mongodb-pvc  # If using PVC or change this if using hostPath
+            claimName: mongodb-pvc
