@@ -12,15 +12,26 @@ spec:
       labels:
         app: mongodb
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: kubernetes.io/hostname
+                    operator: In
+                    values: 
+                      - k8-worker2
+                  
       containers:
         - name: mongodb
           image: karthikmp15/mongodb 
           ports:
             - containerPort: 27017
-          volumeMounts:
+          volumeMounts: 
             - mountPath: /data/db
               name: mongodb-data
       volumes:
-        - name: mongodb-data
-          persistentVolumeClaim:
-            claimName: mongodb-pvc
+        - name: mongo-storage
+          hostPath:
+            path: /mnt/data/mongodb    
+            type: DirectoryOrCreate
