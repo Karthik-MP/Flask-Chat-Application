@@ -11,5 +11,3 @@ Included is `requirements.txt` to quickly install all dependencies using the com
 If you don't have pip3, please install first `sudo apt install python3-pip`.
 
 Then, using the Flask development server, simply run `python3 run.py`.  You're set!
-
-This is an adpatation from: https://github.com/MarkMichon1/Flask-Chat-App
