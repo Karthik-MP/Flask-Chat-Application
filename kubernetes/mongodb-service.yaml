@@ -9,4 +9,5 @@ spec:
     - protocol: TCP
       port: 27017
       targetPort: 27017
-  clusterIP: None  # Optional, for a headless service (used for stateful apps)
+  type: ClusterIP  # Change to NodePort or LoadBalancer if needed
+  
